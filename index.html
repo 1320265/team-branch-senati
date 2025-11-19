@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SENATI Website</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SENATI | Formación Profesional Moderna</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
 
-  <header>
-    <h1>Bienvenido a SENATI</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="page/about.html">Nosotros</a>
-    </nav>
-  </header>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container">
+            <h2 class="logo">SENATI</h2>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="page/nosotros.html">Nosotros</a>
+                <a href="page/carreras.html">Carreras</a>
+                <a href="page/contacto.html">Contacto</a>
+            </nav>
+        </div>
+    </header>
 
-  <main>
+    <!-- HERO -->
     <section class="hero">
-      <h2>Capacitación Técnica Profesional</h2>
-      <p>Esta es la página creada por Cappa en student3.</p>
-      <button id="btn-info">Más Información</button>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Formación Profesional para el Futuro</h1>
+            <p>Educación tecnológica de calidad, orientación al trabajo y empleabilidad asegurada.</p>
+            <a href="page/carreras.html" class="btn">Ver Carreras</a>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 SENATI - Todos los derechos reservados</p>
-  </footer>
+    <!-- SECCIÓN SERVICIOS -->
+    <section class="servicios container">
+        <h2 class="title">¿Por qué estudiar en SENATI?</h2>
 
-  <script src="js/main.js"></script>
+        <div class="grid">
+            <div class="card">
+                <h3>Alta Tecnología</h3>
+                <p>Laboratorios modernos con equipamiento actualizado.</p>
+            </div>
+
+            <div class="card">
+                <h3>Práctica Profesional</h3>
+                <p>Aprende haciendo, con enfoque 100% práctico.</p>
+            </div>
+
+            <div class="card">
+                <h3>Empleabilidad</h3>
+                <p>Más del 80% de egresados trabajan en su especialidad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 SENATI - Página creada por el equipo. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

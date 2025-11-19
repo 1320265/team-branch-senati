@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <div class="login-container">
+    <div class="login-container" id="loginContainer">
         
         <img src="img/logo.png" alt="Logo de la Plataforma" class="logo">
         
@@ -28,7 +28,7 @@
                 <input type="password" id="password" name="password" required>
             </div>
             
-            <button type="submit" class="login-btn">Entrar</button>
+            <button type="submit" class="login-btn" onclick="mostrarMensaje(event)">Entrar</button> 
         </form>
 
         <div class="links">
@@ -36,11 +36,17 @@
             <span>•</span>
             <a href="#">Ayuda</a>
         </div>
+
+        <div id="mensajeDinamico" class="mensaje-oculto">
+            ¡Intento de inicio de sesión detectado!
+        </div>
+
     </div>
     
     <div class="footer-image">
         <img src="img/fondo.png" alt="Ilustración de seguridad" style="max-width: 344px; margin-top: 12px;">
     </div>
 
+    <script src="js/script.js"></script> 
 </body>
 </html>

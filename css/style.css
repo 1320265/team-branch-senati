@@ -1,138 +1,174 @@
-/* Estilos Generales y Reset */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+/* ================================================= */
+/* 1. Variables CSS (Mejora: Organización de Colores) */
+/* ================================================= */
+:root {
+    --color-primary: #ff6600; /* Naranja/Cobre de SENATI */
+    --color-secondary: #0056b3; /* Azul oscuro corporativo */
+    --color-background: #f4f7f9; /* Gris muy claro */
+    --color-shadow: rgba(0, 0, 0, 0.15);
 }
 
-/* Contenedor Principal del Login */
+/* ================================================= */
+/* 2. Estilos Globales y Fondo (Corrección de Redundancia) */
+/* ================================================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente moderna */
+    background-color: var(--color-background); 
+    
+    /* Configuración de fondo con imagen */
+    background-image: url('../img/fondos.jpg');
+    background-size: cover; /* Asegura que cubra todo el área */
+    background-position: center;
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+    
+    /* Centrado de contenido (sin redundancias) */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    min-height: 100vh;       
+    margin: 0;
+    padding: 20px; /* Padding para evitar que el contenido toque los bordes en móvil */
+}
+
+/* ================================================= */
+/* 3. Contenedor Principal del Formulario (Mejora: Estilo 3D) */
+/* ================================================= */
 .login-container {
     background-color: #ffffff;
     padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* Esquinas más suaves */
+    box-shadow: 0 10px 30px var(--color-shadow); /* Sombra más profunda y moderna */
     width: 100%;
     max-width: 400px;
     text-align: center;
-    /* Añadimos transición para el dinamismo */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    
+    /* Mejora: Efecto sutil de aparecer */
+    opacity: 0.98; 
+    transform: translateY(0);
+    transition: all 0.5s ease-out;
 }
 
-/* Estilo del Logo */
+/* ================================================= */
+/* 4. Elementos de Contenido */
+/* ================================================= */
+
+/* Logo */
 .logo {
-    max-width: 150px;
-    margin-bottom: 20px;
+    max-width: 160px; /* Logo ligeramente más grande */
+    margin-bottom: 30px;
+    height: auto;
 }
 
-/* Títulos y Párrafos */
+/* Título */
 h2 {
-    color: #0056b3; /* Color típico de SENATI */
-    margin-bottom: 5px;
+    color: var(--color-secondary); /* Azul corporativo */
+    margin-bottom: 10px;
+    font-size: 28px; /* Título más prominente */
+    font-weight: 600;
 }
 
-p {
-    color: #666;
+/* Párrafo de bienvenida (Añade este estilo si tienes un <p>) */
+.login-container p {
+    color: #777;
     margin-bottom: 25px;
 }
 
-/* Grupo de Input */
+/* ================================================= */
+/* 5. Grupos de Entrada e Inputs (Mejora: Focus Visual) */
+/* ================================================= */
 .input-group {
+    margin-bottom: 25px;
     text-align: left;
-    margin-bottom: 20px;
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin-bottom: 6px;
+    font-weight: 500; /* Menos negrita */
     color: #333;
+    font-size: 15px;
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Importante para que el padding no desborde el ancho */
+    padding: 12px; /* Padding ligeramente mayor */
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
     font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Botón de Entrar */
+/* Mejora: Efecto de enfoque (Focus) */
+.input-group input:focus {
+    border-color: var(--color-primary); /* Borde naranja al enfocarse */
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.3); /* Sombra de enfoque */
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
+/* ================================================= */
+/* 6. Botón de Inicio de Sesión (Mejora: Interacción) */
+/* ================================================= */
 .login-btn {
     width: 100%;
-    padding: 12px;
-    background-color: #ff6600; /* Color Naranja llamativo */
+    background-color: var(--color-primary); /* Naranja principal */
     color: white;
+    padding: 14px; /* Botón más alto */
     border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    font-weight: bold;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px; /* Pequeña separación para mejorar la lectura */
+    transition: background-color 0.3s, transform 0.1s; /* Transición rápida para efecto de clic */
 }
 
 .login-btn:hover {
-    background-color: #e65c00;
+    background-color: #e65c00; /* Naranja más oscuro al pasar el mouse */
 }
 
-/* Enlaces de ayuda y recuperación */
+/* Mejora: Efecto de "clic" */
+.login-btn:active {
+    transform: scale(0.99); /* Se encoge ligeramente al ser presionado */
+}
+
+/* ================================================= */
+/* 7. Enlaces y Footer */
+/* ================================================= */
 .links {
-    margin-top: 20px;
-    font-size: 14px;
+    margin-top: 30px;
+    font-size: 15px;
 }
 
 .links a {
-    color: #0056b3;
+    color: var(--color-secondary);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .links a:hover {
+    color: var(--color-primary); /* Cambio de color al pasar el mouse */
     text-decoration: underline;
 }
 
-/* Estilo para el dinamismo: se añade o quita con JavaScript */
-
-/* 1. Dinamismo de Movimiento (CSS Puros) */
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
-    20%, 40%, 60%, 80% { transform: translateX(5px); }
-}
-
-.cuadro-movimiento {
-    /* Agita el contenedor para simular error o dinamismo */
-    animation: shake 0.5s; 
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); 
-}
-
-
-/* 2. Dinamismo de Visibilidad (Mensaje) */
-.mensaje-oculto {
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-    transition: opacity 0.5s ease, height 0.5s ease;
-    color: red;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-.mensaje-visible {
-    opacity: 1;
-    height: auto;
-    padding: 10px;
-    border: 1px solid red;
-    border-radius: 5px;
-    background-color: #ffebeb;
-}
-
-/* Estilo para la imagen inferior */
+/* Estilo para la imagen del footer */
 .footer-image {
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+/* ================================================= */
+/* 8. Media Queries (Mejora: Responsividad) */
+/* ================================================= */
+
+@media (max-width: 500px) {
+    .login-container {
+        margin: 0 15px; /* Margen en móvil para que no esté pegado al borde */
+        padding: 30px 25px;
+        box-shadow: none; /* Se quita la sombra para un look "nativo" en móvil */
+        border-radius: 0;
+    }
+    
+    body {
+        padding: 0;
+    }
 }

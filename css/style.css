@@ -1,95 +1,138 @@
-/* Estilos Globales y Fondo */
+/* Estilos Generales y Reset */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2; /* Fondo gris claro */
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center;     /* Centrar verticalmente */
-    min-height: 100vh;       /* Asegura que ocupe toda la altura de la vista */
+    background-color: #f4f4f9;
     margin: 0;
-    background-image: url('../img/fondos.jpg');
+    padding: 0;
     display: flex;
-    justify-content: center; 
-    align-items: center;     
-    min-height: 100vh;       
-    margin: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* Contenedor Principal del Formulario */
+/* Contenedor Principal del Login */
 .login-container {
     background-color: #ffffff;
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; /* Ancho máximo estándar para formularios */
+    max-width: 400px;
     text-align: center;
+    /* Añadimos transición para el dinamismo */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
-/* Logo */
+/* Estilo del Logo */
 .logo {
     max-width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Títulos y Párrafos */
+h2 {
+    color: #0056b3; /* Color típico de SENATI */
+    margin-bottom: 5px;
+}
+
+p {
+    color: #666;
     margin-bottom: 25px;
 }
 
-/* Título */
-h2 {
-    color: #333;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-/* Grupos de entrada (Label + Input) */
+/* Grupo de Input */
 .input-group {
-    margin-bottom: 20px;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .input-group label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: bold;
-    color: #555;
+    color: #333;
 }
 
 .input-group input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    border-radius: 5px;
+    box-sizing: border-box; /* Importante para que el padding no desborde el ancho */
     font-size: 16px;
 }
 
-/* Botón de Inicio de Sesión */
+/* Botón de Entrar */
 .login-btn {
     width: 100%;
-    background-color: #0078d4; /* Color azul de Microsoft/Outlook */
-    color: white;
     padding: 12px;
+    background-color: #ff6600; /* Color Naranja llamativo */
+    color: white;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
-    transition: background-color 0.3s;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .login-btn:hover {
-    background-color: #005a9e; /* Azul más oscuro al pasar el mouse */
+    background-color: #e65c00;
 }
 
-/* Enlaces (Olvidé Contraseña, Ayuda) */
+/* Enlaces de ayuda y recuperación */
 .links {
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 14px;
 }
 
 .links a {
-    color: #0078d4;
+    color: #0056b3;
     text-decoration: none;
 }
 
 .links a:hover {
     text-decoration: underline;
+}
+
+/* Estilo para el dinamismo: se añade o quita con JavaScript */
+
+/* 1. Dinamismo de Movimiento (CSS Puros) */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.cuadro-movimiento {
+    /* Agita el contenedor para simular error o dinamismo */
+    animation: shake 0.5s; 
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5); 
+}
+
+
+/* 2. Dinamismo de Visibilidad (Mensaje) */
+.mensaje-oculto {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, height 0.5s ease;
+    color: red;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.mensaje-visible {
+    opacity: 1;
+    height: auto;
+    padding: 10px;
+    border: 1px solid red;
+    border-radius: 5px;
+    background-color: #ffebeb;
+}
+
+/* Estilo para la imagen inferior */
+.footer-image {
+    margin-top: 20px;
 }

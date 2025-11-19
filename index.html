@@ -1,69 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SENATI | Formación Profesional Moderna</title>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SENATI — Innovación, Tecnología y Empleabilidad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
+  <header class="nav" id="top">
+    <div class="wrap">
+      <div class="brand">SENATI <span class="accent">+</span></div>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="page/nosotros.html">Nosotros</a>
+        <a href="page/carreras.html">Carreras</a>
+        <a href="page/contacto.html">Contacto</a>
+      </nav>
+      <div class="actions">
+        <a class="btn btn-tertiary" href="#">Ingresar</a>
+        <a class="btn btn-primary" href="page/contacto.html">Inscríbete</a>
+        <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+      </div>
+    </div>
+  </header>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="container">
-            <h2 class="logo">SENATI</h2>
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="page/nosotros.html">Nosotros</a>
-                <a href="page/carreras.html">Carreras</a>
-                <a href="page/contacto.html">Contacto</a>
-            </nav>
+  <section class="hero">
+    <div class="hero-bg" style="background-image:url('/mnt/data/5bdee1c6-2480-4bde-ac7d-46a809fd56c1.png')"></div>
+    <div class="hero-inner wrap">
+      <div class="hero-text" data-aos="fade-up">
+        <h1>Formación técnica que conecta con la industria</h1>
+        <p class="lead">Programas diseñados con empresas, prácticas reales, certificaciones internacionales y alta empleabilidad.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="page/carreras.html">Ver Carreras</a>
+          <a class="btn btn-outline" href="#contacto">Contáctanos</a>
         </div>
-    </header>
+      </div>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Formación Profesional para el Futuro</h1>
-            <p>Educación tecnológica de calidad, orientación al trabajo y empleabilidad asegurada.</p>
-            <a href="page/carreras.html" class="btn">Ver Carreras</a>
+      <div class="hero-cards" data-aos="fade-left">
+        <div class="mini-card"><strong>+100</strong><span>Empresas convenidas</span></div>
+        <div class="mini-card"><strong>+80%</strong><span>Egresados empleables</span></div>
+        <div class="mini-card"><strong>+20</strong><span>Certificaciones</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features wrap">
+    <div class="grid-4">
+      <div class="f-card" data-aos="fade-up" data-aos-delay="50">
+        <h3>Laboratorios Avanzados</h3>
+        <p>Equipos reales y software de la industria para prácticas con estándares actuales.</p>
+      </div>
+      <div class="f-card" data-aos="fade-up" data-aos-delay="120">
+        <h3>Bolsa de Trabajo</h3>
+        <p>Conexión inmediata con empresas y procesos de reclutamiento preferencial.</p>
+      </div>
+      <div class="f-card" data-aos="fade-up" data-aos-delay="190">
+        <h3>Certificaciones</h3>
+        <p>Acceso a certificaciones internacionales (Cisco, AWS, Microsoft, Autodesk).</p>
+      </div>
+      <div class="f-card" data-aos="fade-up" data-aos-delay="260">
+        <h3>Formación Dual</h3>
+        <p>Aprendizaje en aula + experiencia en empresas reales.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="carreras wrap" id="destacadas">
+    <h2 class="section-title" data-aos="fade-up">Carreras destacadas</h2>
+    <p class="subtitle" data-aos="fade-up" data-aos-delay="80">Programas técnicos y profesionales con alta demanda laboral</p>
+
+    <div class="grid-3" id="carreras-grid">
+      <!-- Cards -->
+      <article class="card" data-aos="zoom-in" data-aos-delay="50">
+        <img src="img/icons/software.svg" alt="Software">
+        <h3>Ingeniería de Software e Inteligencia Artificial</h3>
+        <p>Full‑stack, Machine Learning, MLOps, Cloud, DevOps y seguridad.</p>
+        <a href="page/carreras.html#software" class="card-link">Ver más</a>
+      </article>
+
+      <article class="card" data-aos="zoom-in" data-aos-delay="120">
+        <img src="img/icons/mecatronica.svg" alt="Mecatrónica">
+        <h3>Mecatrónica Industrial</h3>
+        <p>Robótica, PLC, automatización y diseño de sistemas mecatrónicos.</p>
+        <a href="page/carreras.html#mecatronica" class="card-link">Ver más</a>
+      </article>
+
+      <article class="card" data-aos="zoom-in" data-aos-delay="190">
+        <img src="img/icons/redes.svg" alt="Redes">
+        <h3>Redes y Ciberseguridad</h3>
+        <p>Administración de redes, seguridad perimetral, pentesting y SOC.</p>
+        <a href="page/carreras.html#redes" class="card-link">Ver más</a>
+      </article>
+
+      <article class="card" data-aos="zoom-in" data-aos-delay="260">
+        <img src="img/icons/diseno.svg" alt="Diseño Web">
+        <h3>Diseño y Desarrollo Web</h3>
+        <p>UX/UI, frontend moderno, frameworks JS y backend.</p>
+        <a href="page/carreras.html#diseno" class="card-link">Ver más</a>
+      </article>
+
+      <article class="card" data-aos="zoom-in" data-aos-delay="330">
+        <img src="img/icons/electricidad.svg" alt="Electricidad">
+        <h3>Electricidad Industrial</h3>
+        <p>Instalaciones, automatización eléctrica y mantenimiento industrial.</p>
+        <a href="page/carreras.html#electricidad" class="card-link">Ver más</a>
+      </article>
+
+      <article class="card" data-aos="zoom-in" data-aos-delay="400">
+        <img src="img/icons/automotriz.svg" alt="Automotriz">
+        <h3>Tecnología Automotriz</h3>
+        <p>Sistemas electrónicos, diagnóstico y talleres.</p>
+        <a href="page/carreras.html#automotriz" class="card-link">Ver más</a>
+      </article>
+
+    </div>
+
+    <div class="see-all center" data-aos="fade-up" data-aos-delay="480">
+      <a href="page/carreras.html" class="btn btn-primary">Ver todas las carreras</a>
+    </div>
+  </section>
+
+  <section class="testimonios wrap">
+    <h2 class="section-title" data-aos="fade-up">Historias de Éxito</h2>
+    <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="80">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide testimonial">
+          <p>"Gracias a SENATI conseguí trabajo antes de graduarme. Las prácticas fueron clave."</p>
+          <strong>- Ana P., Desarrollo Web</strong>
         </div>
-    </section>
-
-    <!-- SECCIÓN SERVICIOS -->
-    <section class="servicios container">
-        <h2 class="title">¿Por qué estudiar en SENATI?</h2>
-
-        <div class="grid">
-            <div class="card">
-                <h3>Alta Tecnología</h3>
-                <p>Laboratorios modernos con equipamiento actualizado.</p>
-            </div>
-
-            <div class="card">
-                <h3>Práctica Profesional</h3>
-                <p>Aprende haciendo, con enfoque 100% práctico.</p>
-            </div>
-
-            <div class="card">
-                <h3>Empleabilidad</h3>
-                <p>Más del 80% de egresados trabajan en su especialidad.</p>
-            </div>
+        <div class="swiper-slide testimonial">
+          <p>"Las certificaciones me abrieron puertas internacionales."</p>
+          <strong>- Carlos M., Redes</strong>
         </div>
-    </section>
+        <div class="swiper-slide testimonial">
+          <p>"Laboratorios con equipos reales y proyectos con empresas."</p>
+          <strong>- Jorge R., Mecatrónica</strong>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 SENATI - Página creada por el equipo. Todos los derechos reservados.</p>
-    </footer>
+  <section class="cta wrap">
+    <div class="cta-card" data-aos="zoom-in" data-aos-delay="60">
+      <h3>¿Listo para empezar?</h3>
+      <p>Solicita información y nuestro equipo académico te contactará.</p>
+      <a href="page/contacto.html" class="btn btn-primary">Solicitar información</a>
+    </div>
+  </section>
 
-    <script src="js/main.js"></script>
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <h4>SENATI</h4>
+        <p>Formación técnica y profesional con visión industrial.</p>
+      </div>
+      <div>
+        <h4>Contactos</h4>
+        <p>informes@senati.edu.pe</p>
+        <p>(01) 514-4444</p>
+      </div>
+      <div>
+        <h4>Sedes</h4>
+        <p>Lima, Arequipa, Trujillo, Chiclayo, Huancayo...</p>
+      </div>
+    </div>
+    <div class="copyright">© 2025 SENATI - Todos los derechos reservados</div>
+  </footer>
+
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    AOS.init({duration:700,once:true});
+    const swiper = new Swiper('.mySwiper',{loop:true,autoHeight:true,pagination:{el:'.swiper-pagination',clickable:true},autoplay:{delay:4500}});
+  </script>
 </body>
 </html>

@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Carreras | SENATI</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carreras - SENATI</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<header class="navbar">
-    <div class="container">
-        <h2 class="logo">SENATI</h2>
-        <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="carreras.html">Carreras</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+  <header class="nav">
+    <div class="wrap">
+      <div class="brand">SENATI <span class="accent">+</span></div>
+      <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="carreras.html">Carreras</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
-</header>
+  </header>
 
-<section class="container">
-    <h1 class="title">Carreras Profesionales</h1>
+  <main class="wrap" style="padding:40px 0">
+    <h1>Carreras SENATI</h1>
+    <p>Listado amplio de programas técnicos y profesionales. Hacemos foco en la práctica y en las necesidades del mercado.</p>
 
-    <div class="grid">
-
-        <div class="card">
-            <h3>Ingeniería de Software e IA</h3>
-            <p>Desarrollo de software, IA, cloud y más.</p>
-        </div>
-
-        <div class="card">
-            <h3>Mecatrónica</h3>
-            <p>Robótica, automatización y control industrial.</p>
-        </div>
-
-        <div class="card">
-            <h3>Administración Industrial</h3>
-            <p>Gestión de empresas, procesos y logística.</p>
-        </div>
-
+    <div class="grid-3" data-anim>
+      <div class="card" id="software"><h3>Ingeniería de Software e IA</h3><p>Data science, ML, full-stack y cloud.</p></div>
+      <div class="card" id="mecatronica"><h3>Mecatrónica Industrial</h3><p>Robótica industrial, PLC y automatización.</p></div>
+      <div class="card" id="redes"><h3>Redes y Ciberseguridad</h3><p>Administración de redes, seguridad y forense digital.</p></div>
+      <div class="card" id="electricidad"><h3>Electricidad Industrial</h3><p>Instalaciones, PLCs y mantenimiento.</p></div>
+      <div class="card" id="diseno"><h3>Diseño y Desarrollo Web</h3><p>UX, frontend moderno y backend.</p></div>
+      <div class="card" id="automotriz"><h3>Tecnología Automotriz</h3><p>Sistemas electrónicos, diagnóstico y talleres.</p></div>
+      <div class="card" id="soldadura"><h3>Soldadura y Tecnologías de Unión</h3><p>MIG, TIG, procesos semiautomáticos.</p></div>
+      <div class="card" id="gestion"><h3>Gestión de Proyectos</h3><p>SCRUM, planificación y dirección de proyectos.</p></div>
+      <div class="card" id="bi"><h3>Inteligencia de Negocios</h3><p>BI, dashboards y análisis de datos.</p></div>
+      <div class="card" id="manufactura"><h3>Mecánica de Producción</h3><p>Procesos de manufactura, CNC y control de calidad.</p></div>
+      <div class="card" id="conta"><h3>Contabilidad y Finanzas</h3><p>Sistemas contables, normas y tributación.</p></div>
+      <div class="card" id="logistica"><h3>Logística y Comercio Exterior</h3><p>Cadena de suministro, aduanas y comercio internacional.</p></div>
     </div>
-</section>
+  </main>
 
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <h4>SENATI</h4>
+        <p>Formación técnica y profesional con visión industrial.</p>
+      </div>
+      <div>
+        <h4>Contactos</h4>
+        <p>informes@senati.edu.pe</p>
+        <p>(01) 514-4444</p>
+      </div>
+      <div>
+        <h4>Sedes</h4>
+        <p>Lima, Arequipa, Trujillo, Chiclayo, Huancayo...</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
 </body>
 </html>

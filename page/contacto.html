@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Contacto | SENATI</title>
-    <link rel="stylesheet" href="../css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contacto - SENATI</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-
-<header class="navbar">
-    <div class="container">
-        <h2 class="logo">SENATI</h2>
-        <nav>
-            <a href="../index.html">Inicio</a>
-            <a href="nosotros.html">Nosotros</a>
-            <a href="carreras.html">Carreras</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+  <header class="nav">
+    <div class="wrap">
+      <div class="brand">SENATI <span class="accent">+</span></div>
+      <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="carreras.html">Carreras</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
     </div>
-</header>
+  </header>
 
-<section class="container">
-    <h1 class="title">Contáctanos</h1>
+  <main class="wrap" style="padding:40px 0">
+    <h1>Contacto</h1>
+    <p>Escríbenos y un asesor te responderá en menos de 48 horas.</p>
 
-    <p>Puedes comunicarte con nosotros por nuestros canales oficiales:</p>
+    <form action="#" class="contact-form" id="contactForm">
+      <label>Nombre<input type="text" name="nombre" required></label>
+      <label>Correo<input type="email" name="email" required></label>
+      <label>Mensaje<textarea name="mensaje" rows="6" required></textarea></label>
+      <button class="btn btn-primary" type="submit">Enviar</button>
+    </form>
 
-    <ul>
-        <li>Email: informes@senati.edu.pe</li>
-        <li>Teléfono: (01) 514-4444</li>
-        <li>Dirección: Av. Alfredo Mendiola, Lima</li>
-    </ul>
-</section>
+    <h3>Información adicional</h3>
+    <p>Teléfono: (01) 514-4444</p>
+    <p>Email: informes@senati.edu.pe</p>
+  </main>
 
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <div>
+        <h4>SENATI</h4>
+        <p>Formación técnica y profesional con visión industrial.</p>
+      </div>
+      <div>
+        <h4>Contactos</h4>
+        <p>informes@senati.edu.pe</p>
+        <p>(01) 514-4444</p>
+      </div>
+      <div>
+        <h4>Sedes</h4>
+        <p>Lima, Arequipa, Trujillo, Chiclayo, Huancayo...</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.getElementById('contactForm')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Mensaje enviado. Pronto un asesor te contactará.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>

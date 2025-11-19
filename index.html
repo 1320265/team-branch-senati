@@ -4,12 +4,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SENATI — Innovación, Tecnología y Empleabilidad</title>
+
+  <!-- Fonts & icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pQ2X6Xr5Y5bYkK1Qd3s8bqvVw1YV0e5qZcG1gkK1mQp+5Kq9q5q6q9v6q9q5q6q9q5q6q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Small inline tweaks for hero visuals */
+    .hero .typed { color: #00c4ff; font-weight:700 }
+    .logo-clients img{height:42px;opacity:0.9}
+  </style>
 </head>
 <body>
+  <!-- NAV -->
   <header class="nav" id="top">
     <div class="wrap">
       <div class="brand">SENATI <span class="accent">+</span></div>
@@ -27,11 +39,14 @@
     </div>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
+    <!-- local image uploaded by user -->
     <div class="hero-bg" style="background-image:url('/mnt/data/5bdee1c6-2480-4bde-ac7d-46a809fd56c1.png')"></div>
+
     <div class="hero-inner wrap">
       <div class="hero-text" data-aos="fade-up">
-        <h1>Formación técnica que conecta con la industria</h1>
+        <h1>Formación técnica que <span class="typed" id="typed"></span></h1>
         <p class="lead">Programas diseñados con empresas, prácticas reales, certificaciones internacionales y alta empleabilidad.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="page/carreras.html">Ver Carreras</a>
@@ -45,87 +60,68 @@
         <div class="mini-card"><strong>+20</strong><span>Certificaciones</span></div>
       </div>
     </div>
+
+    <!-- animated wave SVG separator -->
+    <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none"><path fill="#f2f6fa" d="M0,48 C360,120 1080,-24 1440,48 L1440,120 L0,120 Z"></path></svg>
   </section>
 
+  <!-- FEATURES / BENEFICIOS -->
   <section class="features wrap">
     <div class="grid-4">
-      <div class="f-card" data-aos="fade-up" data-aos-delay="50">
+      <div class="f-card" data-aos="fade-up" data-anim>
+        <i class="fa-solid fa-microchip fa-2x" style="color:var(--blue-600)"></i>
         <h3>Laboratorios Avanzados</h3>
-        <p>Equipos reales y software de la industria para prácticas con estándares actuales.</p>
+        <p>Equipos y software de la industria para prácticas reales.</p>
       </div>
-      <div class="f-card" data-aos="fade-up" data-aos-delay="120">
+      <div class="f-card" data-aos="fade-up" data-anim>
+        <i class="fa-solid fa-briefcase fa-2x" style="color:var(--blue-600)"></i>
         <h3>Bolsa de Trabajo</h3>
-        <p>Conexión inmediata con empresas y procesos de reclutamiento preferencial.</p>
+        <p>Conexión con empresas y procesos de reclutamiento preferencial.</p>
       </div>
-      <div class="f-card" data-aos="fade-up" data-aos-delay="190">
+      <div class="f-card" data-aos="fade-up" data-anim>
+        <i class="fa-solid fa-certificate fa-2x" style="color:var(--blue-600)"></i>
         <h3>Certificaciones</h3>
-        <p>Acceso a certificaciones internacionales (Cisco, AWS, Microsoft, Autodesk).</p>
+        <p>Acceso a certificaciones internacionales (Cisco, AWS, Microsoft).</p>
       </div>
-      <div class="f-card" data-aos="fade-up" data-aos-delay="260">
+      <div class="f-card" data-aos="fade-up" data-anim>
+        <i class="fa-solid fa-handshake fa-2x" style="color:var(--blue-600)"></i>
         <h3>Formación Dual</h3>
-        <p>Aprendizaje en aula + experiencia en empresas reales.</p>
+        <p>Estudia y trabaja con empresas reales desde el primer ciclo.</p>
       </div>
     </div>
   </section>
 
+  <!-- CARRERAS DESTACADAS -->
   <section class="carreras wrap" id="destacadas">
-    <h2 class="section-title" data-aos="fade-up">Carreras destacadas</h2>
-    <p class="subtitle" data-aos="fade-up" data-aos-delay="80">Programas técnicos y profesionales con alta demanda laboral</p>
-
-    <div class="grid-3" id="carreras-grid">
-      <!-- Cards -->
-      <article class="card" data-aos="zoom-in" data-aos-delay="50">
-        <img src="img/icons/software.svg" alt="Software">
-        <h3>Ingeniería de Software e Inteligencia Artificial</h3>
-        <p>Full‑stack, Machine Learning, MLOps, Cloud, DevOps y seguridad.</p>
-        <a href="page/carreras.html#software" class="card-link">Ver más</a>
-      </article>
-
-      <article class="card" data-aos="zoom-in" data-aos-delay="120">
-        <img src="img/icons/mecatronica.svg" alt="Mecatrónica">
-        <h3>Mecatrónica Industrial</h3>
-        <p>Robótica, PLC, automatización y diseño de sistemas mecatrónicos.</p>
-        <a href="page/carreras.html#mecatronica" class="card-link">Ver más</a>
-      </article>
-
-      <article class="card" data-aos="zoom-in" data-aos-delay="190">
-        <img src="img/icons/redes.svg" alt="Redes">
-        <h3>Redes y Ciberseguridad</h3>
-        <p>Administración de redes, seguridad perimetral, pentesting y SOC.</p>
-        <a href="page/carreras.html#redes" class="card-link">Ver más</a>
-      </article>
-
-      <article class="card" data-aos="zoom-in" data-aos-delay="260">
-        <img src="img/icons/diseno.svg" alt="Diseño Web">
-        <h3>Diseño y Desarrollo Web</h3>
-        <p>UX/UI, frontend moderno, frameworks JS y backend.</p>
-        <a href="page/carreras.html#diseno" class="card-link">Ver más</a>
-      </article>
-
-      <article class="card" data-aos="zoom-in" data-aos-delay="330">
-        <img src="img/icons/electricidad.svg" alt="Electricidad">
-        <h3>Electricidad Industrial</h3>
-        <p>Instalaciones, automatización eléctrica y mantenimiento industrial.</p>
-        <a href="page/carreras.html#electricidad" class="card-link">Ver más</a>
-      </article>
-
-      <article class="card" data-aos="zoom-in" data-aos-delay="400">
-        <img src="img/icons/automotriz.svg" alt="Automotriz">
-        <h3>Tecnología Automotriz</h3>
-        <p>Sistemas electrónicos, diagnóstico y talleres.</p>
-        <a href="page/carreras.html#automotriz" class="card-link">Ver más</a>
-      </article>
-
+    <div class="header-row" data-aos="fade-up">
+      <h2 class="section-title">Carreras destacadas</h2>
+      <p class="subtitle">Programas técnicos y profesionales con alta demanda laboral</p>
     </div>
 
-    <div class="see-all center" data-aos="fade-up" data-aos-delay="480">
+    <div class="grid-3" id="carreras-grid">
+      <!-- Cards generadas por JS for richer content -->
+    </div>
+
+    <div class="see-all center" data-aos="fade-up">
       <a href="page/carreras.html" class="btn btn-primary">Ver todas las carreras</a>
     </div>
   </section>
 
+  <!-- LOGOS / ALIANZAS -->
+  <section class="partners wrap" data-aos="fade-up">
+    <h3>Aliados y empresas</h3>
+    <div class="logo-clients">
+      <img src="img/partners/partner1.png" alt="partner">
+      <img src="img/partners/partner2.png" alt="partner">
+      <img src="img/partners/partner3.png" alt="partner">
+      <img src="img/partners/partner4.png" alt="partner">
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS SLIDER -->
   <section class="testimonios wrap">
-    <h2 class="section-title" data-aos="fade-up">Historias de Éxito</h2>
-    <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="80">
+    <h2 class="section-title" data-aos="fade-up">Historias de éxito</h2>
+    <div class="swiper mySwiper" data-aos="fade-up">
       <div class="swiper-wrapper">
         <div class="swiper-slide testimonial">
           <p>"Gracias a SENATI conseguí trabajo antes de graduarme. Las prácticas fueron clave."</p>
@@ -144,14 +140,16 @@
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="cta wrap">
-    <div class="cta-card" data-aos="zoom-in" data-aos-delay="60">
+    <div class="cta-card" data-aos="zoom-in">
       <h3>¿Listo para empezar?</h3>
       <p>Solicita información y nuestro equipo académico te contactará.</p>
       <a href="page/contacto.html" class="btn btn-primary">Solicitar información</a>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="wrap foot-grid">
       <div>
@@ -171,12 +169,39 @@
     <div class="copyright">© 2025 SENATI - Todos los derechos reservados</div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="js/main.js"></script>
   <script>
-    AOS.init({duration:700,once:true});
-    const swiper = new Swiper('.mySwiper',{loop:true,autoHeight:true,pagination:{el:'.swiper-pagination',clickable:true},autoplay:{delay:4500}});
+    // initialize AOS
+    AOS.init({duration:700, once:true});
+
+    // typed effect
+    const typed = new Typed('#typed', { strings: ['aprende.', 'practica.', 'trabaja.'], typeSpeed:60, backSpeed:40, loop:true });
+
+    // init swiper (testimonials)
+    const swiper = new Swiper('.mySwiper',{loop:true,autoHeight:true,pagination:{el:'.swiper-pagination',clickable:true},autoplay:{delay:4200}});
+
+    // generate careers cards with more details
+    const careers = [
+      {id:'software', title:'Ingeniería de Software e IA', desc:'Full‑stack, ML, MLOps, Cloud, DevOps y seguridad', bullets:['Python, JavaScript, Cloud','Machine Learning','MLOps & DevOps']},
+      {id:'mecatronica', title:'Mecatrónica Industrial', desc:'Robótica, PLC, automatización y diseño de sistemas', bullets:['Robótica','Control PLC','Sensores y actuadores']},
+      {id:'redes', title:'Redes y Ciberseguridad', desc:'Administración de redes, seguridad y forense digital', bullets:['Cisco & routing','Pentesting','SOC & SIEM']},
+      {id:'diseno', title:'Diseño y Desarrollo Web', desc:'UX, frontend moderno, frameworks JS y backend', bullets:['HTML/CSS/JS','React / Vue','UX & prototipado']},
+      {id:'electricidad', title:'Electricidad Industrial', desc:'Instalaciones, PLCs y mantenimiento', bullets:['Instalaciones','Mantenimiento','Automatización eléctrica']},
+      {id:'automotriz', title:'Tecnología Automotriz', desc:'Sistemas electrónicos, diagnóstico y talleres', bullets:['ECU & diagnosis','Sistemas híbridos','Electrónica automotriz']}
+    ];
+    const grid = document.getElementById('carreras-grid');
+    careers.forEach(c=>{
+      const a = document.createElement('article'); a.className='card'; a.setAttribute('data-anim','');
+      a.innerHTML = `<h3>${c.title}</h3><p>${c.desc}</p><ul>${c.bullets.map(b=>`<li>${b}</li>`).join('')}</ul><a class="card-link" href="page/carreras.html#${c.id}">Ver más</a>`;
+      grid.appendChild(a);
+    });
+
+    // reveal newly added elements
+    document.querySelectorAll('[data-anim]').forEach(el=>el.classList.add('visible'));
   </script>
 </body>
 </html>

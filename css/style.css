@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f1f1;
+}
+
+header {
+  background: #0066cc;
+  padding: 1rem;
+  color: white;
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.hero {
+  padding: 2rem;
+  background: white;
+  margin: 1rem;
+  border-radius: 10px;
+}

@@ -1,62 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Carreras - SENATI</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carreras – SENATI PRO</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body>
-  <header class="nav">
-    <div class="wrap">
-      <div class="brand">SENATI <span class="accent">+</span></div>
-      <nav class="menu">
-        <a href="../index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="carreras.html">Carreras</a>
-        <a href="contacto.html">Contacto</a>
-      </nav>
+<body class="dark-mode">
+
+  <!-- HERO -->
+  <section class="hero-carreras" data-anim>
+    <video autoplay muted loop class="hero-video">
+      <source src="videos/senati-campus.mp4" type="video/mp4" />
+    </video>
+    <div class="hero-overlay"></div>
+    <h1 class="hero-title">Carreras Profesionales</h1>
+    <p class="hero-sub">Formando a los mejores técnicos del Perú</p>
+  </section>
+
+  <!-- FILTROS -->
+  <section class="filtros" data-anim>
+    <input type="text" id="search" placeholder="Buscar carrera..." />
+    <select id="categoria">
+      <option value="todos">Todas las categorías</option>
+      <option value="industria">Industria y Manufactura</option>
+      <option value="tecnologia">Tecnología e Informática</option>
+      <option value="servicios">Servicios y Gestión</option>
+    </select>
+  </section>
+
+  <!-- GRID DE CARRERAS -->
+  <section class="grid-carreras" id="carrerasGrid">
+    <!-- Ejemplo card -->
+    <div class="card" data-cat="tecnologia" data-anim>
+      <img src="img/carreras/software.jpg" alt="Software" />
+      <h3>Ingeniería de Software con IA</h3>
+      <p>Desarrolla soluciones con inteligencia artificial, cloud y arquitectura moderna.</p>
     </div>
-  </header>
 
-  <main class="wrap" style="padding:40px 0">
-    <h1>Carreras SENATI</h1>
-    <p>Listado amplio de programas técnicos y profesionales. Hacemos foco en la práctica y en las necesidades del mercado.</p>
-
-    <div class="grid-3" data-anim>
-      <div class="card" id="software"><h3>Ingeniería de Software e IA</h3><p>Data science, ML, full-stack y cloud.</p></div>
-      <div class="card" id="mecatronica"><h3>Mecatrónica Industrial</h3><p>Robótica industrial, PLC y automatización.</p></div>
-      <div class="card" id="redes"><h3>Redes y Ciberseguridad</h3><p>Administración de redes, seguridad y forense digital.</p></div>
-      <div class="card" id="electricidad"><h3>Electricidad Industrial</h3><p>Instalaciones, PLCs y mantenimiento.</p></div>
-      <div class="card" id="diseno"><h3>Diseño y Desarrollo Web</h3><p>UX, frontend moderno y backend.</p></div>
-      <div class="card" id="automotriz"><h3>Tecnología Automotriz</h3><p>Sistemas electrónicos, diagnóstico y talleres.</p></div>
-      <div class="card" id="soldadura"><h3>Soldadura y Tecnologías de Unión</h3><p>MIG, TIG, procesos semiautomáticos.</p></div>
-      <div class="card" id="gestion"><h3>Gestión de Proyectos</h3><p>SCRUM, planificación y dirección de proyectos.</p></div>
-      <div class="card" id="bi"><h3>Inteligencia de Negocios</h3><p>BI, dashboards y análisis de datos.</p></div>
-      <div class="card" id="manufactura"><h3>Mecánica de Producción</h3><p>Procesos de manufactura, CNC y control de calidad.</p></div>
-      <div class="card" id="conta"><h3>Contabilidad y Finanzas</h3><p>Sistemas contables, normas y tributación.</p></div>
-      <div class="card" id="logistica"><h3>Logística y Comercio Exterior</h3><p>Cadena de suministro, aduanas y comercio internacional.</p></div>
+    <div class="card" data-cat="industria" data-anim>
+      <img src="img/carreras/mecanica.jpg" alt="Mecánica" />
+      <h3>Mecánica Automotriz</h3>
+      <p>Diagnóstico, mantenimiento y reparación de vehículos modernos.</p>
     </div>
-  </main>
 
-  <footer class="site-footer">
-    <div class="wrap foot-grid">
-      <div>
-        <h4>SENATI</h4>
-        <p>Formación técnica y profesional con visión industrial.</p>
-      </div>
-      <div>
-        <h4>Contactos</h4>
-        <p>informes@senati.edu.pe</p>
-        <p>(01) 514-4444</p>
-      </div>
-      <div>
-        <h4>Sedes</h4>
-        <p>Lima, Arequipa, Trujillo, Chiclayo, Huancayo...</p>
-      </div>
+    <div class="card" data-cat="servicios" data-anim>
+      <img src="img/carreras/administracion.jpg" alt="Administración" />
+      <h3>Administración Industrial</h3>
+      <p>Gestión, logística y operaciones para empresas competitivas.</p>
     </div>
-  </footer>
 
-  <script src="../js/main.js"></script>
+    <div class="card" data-cat="tecnologia" data-anim>
+      <img src="img/carreras/redes.jpg" alt="Redes" />
+      <h3>Redes y Ciberseguridad</h3>
+      <p>Configura, protege y administra infraestructuras digitales modernas.</p>
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+  <script>
+    // filtro
+    const search = document.getElementById('search');
+    const cat = document.getElementById('categoria');
+    const cards = document.querySelectorAll('.card');
+
+    function filtrar() {
+      const text = search.value.toLowerCase();
+      const categoria = cat.value;
+      cards.forEach(c => {
+        const matchText = c.querySelector('h3').textContent.toLowerCase().includes(text);
+        const matchCat = categoria === 'todos' || c.dataset.cat === categoria;
+        c.style.display = matchText && matchCat ? 'block' : 'none';
+      });
+    }
+
+    search.addEventListener('input', filtrar);
+    cat.addEventListener('change', filtrar);
+  </script>
+
 </body>
 </html>

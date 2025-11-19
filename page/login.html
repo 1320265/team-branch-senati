@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Plataforma Web SENATI</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="login-container" id="loginContainer">
+        
+        <img src="img/logo.png" alt="Logo de la Plataforma" class="logo">
+        
+        <h2>Bienvenido</h2>
+        <p>Inicia sesión con tus credenciales.</p>
+
+        <form action="#" method="POST">
+            
+            <div class="input-group">
+                <label for="usuario">Usuario o Correo Electrónico</label>
+                <input type="text" id="usuario" name="usuario" placeholder="ej. 10000000@senati.pe" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <button type="submit" class="login-btn" onclick="mostrarMensaje(event)">Entrar</button> 
+        </form>
+
+        <div class="links">
+            <a href="pages/recuperar.html">¿Olvidaste tu contraseña?</a>
+            <span>•</span>
+            <a href="pages/ayuda.html">Ayuda</a> </div>
+        </div>
+
+        <div id="mensajeDinamico" class="mensaje-oculto">
+            ¡Intento de inicio de sesión detectado!
+        </div>
+
+    </div>
+    
+    <div class="footer-image">
+        <img src="img/fondo.png" alt="Ilustración de seguridad" style="max-width: 344px; margin-top: 12px;">
+    </div>
+
+    <script src="js/script.js"></script> 
+</body>
+</html>

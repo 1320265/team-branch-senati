@@ -1,0 +1,95 @@
+/* Estilos Globales y Fondo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2; /* Fondo gris claro */
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;     /* Centrar verticalmente */
+    min-height: 100vh;       /* Asegura que ocupe toda la altura de la vista */
+    margin: 0;
+    background-image: url('../img/fondos.jpg');
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;       
+    margin: 0;
+}
+
+/* Contenedor Principal del Formulario */
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo estándar para formularios */
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    max-width: 150px;
+    margin-bottom: 25px;
+}
+
+/* Título */
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Grupos de entrada (Label + Input) */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+    font-size: 16px;
+}
+
+/* Botón de Inicio de Sesión */
+.login-btn {
+    width: 100%;
+    background-color: #0078d4; /* Color azul de Microsoft/Outlook */
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #005a9e; /* Azul más oscuro al pasar el mouse */
+}
+
+/* Enlaces (Olvidé Contraseña, Ayuda) */
+.links {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.links a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
